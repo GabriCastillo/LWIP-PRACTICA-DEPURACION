@@ -105,6 +105,8 @@ netif_loopif_init(struct netif *netif)
 void
 netif_init(void)
 {
+    printf("3...");
+
 #if LWIP_HAVE_LOOPIF
   ip_addr_t loop_ipaddr, loop_netmask, loop_gw;
   IP4_ADDR(&loop_gw, 127,0,0,1);
