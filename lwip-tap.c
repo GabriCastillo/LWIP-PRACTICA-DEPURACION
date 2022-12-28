@@ -214,7 +214,7 @@ main(int argc,char *argv[])
         break;
       if (parse_interface(&tapif[n],optarg) != 0)
         help();
-      printf("Creacion de la hebra tcp")
+      printf("Creacion de la hebra tcp");
       netif_add(&netif[n],
                 IP4_OR_NULL(tapif[n].ip_addr),
                 IP4_OR_NULL(tapif[n].netmask),
