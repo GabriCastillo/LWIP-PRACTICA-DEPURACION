@@ -177,7 +177,6 @@ help(void)
 int
 main(int argc,char *argv[])
 {
-  printf("InicIalizando la pila LWIP1");
   struct tapif tapif[NETIF_MAX];
   struct netif netif[NETIF_MAX];
   int ch;
@@ -185,9 +184,8 @@ main(int argc,char *argv[])
 
   memset(tapif,0,sizeof(tapif));
   memset(netif,0,sizeof(netif));
-  
+  printf("InicIalizando la pila LWIP1");
   tcpip_init(NULL,NULL);
-  printf("InicIalizando la pila LWIP2");
 
 #ifdef LWIP_DEBUG
   while ((ch = getopt(argc,argv,"CEHdhi:")) != -1) {
@@ -216,7 +214,6 @@ main(int argc,char *argv[])
         break;
       if (parse_interface(&tapif[n],optarg) != 0)
         help();
-      printf("Creacion de la hebra tcp");
       netif_add(&netif[n],
                 IP4_OR_NULL(tapif[n].ip_addr),
                 IP4_OR_NULL(tapif[n].netmask),

@@ -288,6 +288,8 @@
 void
 lwip_init(void)
 {
+  printf("InicIalizando la pila LWIP");
+  printf("Inicializando");
   /* Modules initialization */
   stats_init();
 #if !NO_SYS
