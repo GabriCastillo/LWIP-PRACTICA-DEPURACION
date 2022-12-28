@@ -177,6 +177,7 @@ help(void)
 int
 main(int argc,char *argv[])
 {
+  printf("InicIalizando la pila LWIP1");
   struct tapif tapif[NETIF_MAX];
   struct netif netif[NETIF_MAX];
   int ch;
@@ -184,8 +185,9 @@ main(int argc,char *argv[])
 
   memset(tapif,0,sizeof(tapif));
   memset(netif,0,sizeof(netif));
-  printf("InicIalizando la pila LWIP");
+  
   tcpip_init(NULL,NULL);
+  printf("InicIalizando la pila LWIP2");
 
 #ifdef LWIP_DEBUG
   while ((ch = getopt(argc,argv,"CEHdhi:")) != -1) {
