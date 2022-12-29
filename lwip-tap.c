@@ -224,7 +224,6 @@ int main(int argc, char *argv[])
       break;
     case 'E':
       udpecho_init();
-      printf("Entrada al procedimiento \n");
       echo_init();
       break;
     case 'H':

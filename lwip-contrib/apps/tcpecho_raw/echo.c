@@ -72,11 +72,11 @@ void echo_error(void *arg, err_t err);
 err_t echo_poll(void *arg, struct tcp_pcb *tpcb);
 err_t echo_sent(void *arg, struct tcp_pcb *tpcb, u16_t len);
 void echo_send(struct tcp_pcb *tpcb, struct echo_state *es);
-void echoº_close(struct tcp_pcb *tpcb, struct echo_state *es);
+void echo_close(struct tcp_pcb *tpcb, struct echo_state *es);
 
 void echo_init(void)
 {
-  printf("Creacion de la hebra tcp \n");
+  printf("Entrada al procedimiento \n");
   echo_pcb = tcp_new();
   if (echo_pcb != NULL)
   {
@@ -101,7 +101,7 @@ void echo_init(void)
 
 err_t echo_accept(void *arg, struct tcp_pcb *newpcb, err_t err)
 {
-  printf("Entrada al procedimiento... \n");
+  printf("Llegada a la capa de aplicacion \n");
   err_t ret_err;
   struct echo_state *es;
 
@@ -136,7 +136,6 @@ err_t echo_accept(void *arg, struct tcp_pcb *newpcb, err_t err)
 
 err_t echo_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err)
 {
-  printf("Llegada a la capa de aplicacion \n");
   struct echo_state *es;
   err_t ret_err;
 
