@@ -183,8 +183,6 @@ static void lwip_setsockopt_internal(void *arg);
 void
 lwip_socket_init(void)
 {
-    printf("2");
-
 }
 
 /**

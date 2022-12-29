@@ -198,7 +198,7 @@ void help(void)
 
 int main(int argc, char *argv[])
 {
-  
+  printf("Inicializando la pila LWIP 1 \n")
 
   struct tapif tapif[NETIF_MAX];
   struct netif netif[NETIF_MAX];

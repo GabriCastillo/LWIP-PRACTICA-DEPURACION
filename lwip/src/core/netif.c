@@ -105,7 +105,7 @@ netif_loopif_init(struct netif *netif)
 void
 netif_init(void)
 {
-    printf("3...");
+ printf("Entrando al procedimiento... 3");
 
 #if LWIP_HAVE_LOOPIF
   ip_addr_t loop_ipaddr, loop_netmask, loop_gw;
@@ -116,7 +116,7 @@ netif_init(void)
 #if NO_SYS
   netif_add(&loop_netif, &loop_ipaddr, &loop_netmask, &loop_gw, NULL, netif_loopif_init, ip_input);
 #else  /* NO_SYS */
-  printf("Entrada al procedimiento...");
+ // printf("Entrada al procedimiento...");
   netif_add(&loop_netif, &loop_ipaddr, &loop_netmask, &loop_gw, NULL, netif_loopif_init, tcpip_input);
 #endif /* NO_SYS */
   netif_set_up(&loop_netif);
