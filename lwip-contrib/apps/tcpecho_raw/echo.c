@@ -72,7 +72,7 @@ void echo_error(void *arg, err_t err);
 err_t echo_poll(void *arg, struct tcp_pcb *tpcb);
 err_t echo_sent(void *arg, struct tcp_pcb *tpcb, u16_t len);
 void echo_send(struct tcp_pcb *tpcb, struct echo_state *es);
-void echo_close(struct tcp_pcb *tpcb, struct echo_state *es);
+void echoº_close(struct tcp_pcb *tpcb, struct echo_state *es);
 
 void echo_init(void)
 {

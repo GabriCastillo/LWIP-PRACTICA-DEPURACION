@@ -454,6 +454,7 @@ tcpip_trycallback(struct tcpip_callback_msg* msg)
 void
 tcpip_init(tcpip_init_done_fn initfunc, void *arg)
 {
+  printf("Inicializando... \n");
   lwip_init();
   tcpip_init_done = initfunc;
   tcpip_init_done_arg = arg;

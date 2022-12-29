@@ -1393,7 +1393,6 @@ void
 tcp_recv(struct tcp_pcb *pcb, tcp_recv_fn recv)
 {
   LWIP_ASSERT("invalid socket state for recv callback", pcb->state != LISTEN);
-  printf("Entrando a funcion tcp_recv de creacion PCB 3 \n");
   pcb->recv = recv;
 }
 

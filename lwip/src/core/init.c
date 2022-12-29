@@ -288,7 +288,6 @@
 void
 lwip_init(void)
 {
-  printf("Inicializando... \n");
   /* Modules initialization */
   stats_init();
 #if !NO_SYS

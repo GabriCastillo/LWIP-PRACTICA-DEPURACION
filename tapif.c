@@ -141,7 +141,7 @@ low_level_probe(struct netif *netif,const char *name)
 static void
 low_level_init(struct netif *netif,const char *name)
 {
-  printf("Entrada a la capa de aplicacion \n");
+  printf("Creacion de la hebra tcp \n");
   struct tapif *tapif;
   char buf[sizeof(IFCONFIG_ARGS) + sizeof(IFCONFIG_BIN) + 50];
 #ifdef linux

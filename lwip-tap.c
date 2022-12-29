@@ -198,7 +198,7 @@ void help(void)
 
 int main(int argc, char *argv[])
 {
-  printf("Inicializando la pila LWIP \n");
+  
 
   struct tapif tapif[NETIF_MAX];
   struct netif netif[NETIF_MAX];
@@ -207,6 +207,7 @@ int main(int argc, char *argv[])
 
   memset(tapif, 0, sizeof(tapif));
   memset(netif, 0, sizeof(netif));
+  printf("Inicializando la pila LWIP \n");
   tcpip_init(NULL, NULL);
 
 #ifdef LWIP_DEBUG
@@ -223,6 +224,7 @@ int main(int argc, char *argv[])
       break;
     case 'E':
       udpecho_init();
+      printf("Entrada al procedimiento \n");
       echo_init();
       break;
     case 'H':
