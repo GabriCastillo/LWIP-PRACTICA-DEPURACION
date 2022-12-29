@@ -76,9 +76,8 @@ void echo_close(struct tcp_pcb *tpcb, struct echo_state *es);
 
 void echo_init(void)
 {
-  printf("Iniciando la pila LWIP");
+  printf("Iniciando la pila LWIP \n");
   echo_pcb = tcp_new();
-  printf("Iniciando la pila LWIP1");
   if (echo_pcb != NULL)
   {
     err_t err;
@@ -102,7 +101,7 @@ void echo_init(void)
 
 err_t echo_accept(void *arg, struct tcp_pcb *newpcb, err_t err)
 {
-  printf("Inicializando...");
+  printf("Inicializando... \n");
 
   err_t ret_err;
   struct echo_state *es;
@@ -138,7 +137,6 @@ err_t echo_accept(void *arg, struct tcp_pcb *newpcb, err_t err)
 
 err_t echo_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err)
 {
-  printf("Iniciando la pila LWIP2");
   struct echo_state *es;
   err_t ret_err;
 
@@ -222,7 +220,6 @@ err_t echo_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err)
 
 void echo_error(void *arg, err_t err)
 {
-  printf("Iniciando la pila LWIP3");
   struct echo_state *es;
 
   LWIP_UNUSED_ARG(err);
@@ -236,7 +233,6 @@ void echo_error(void *arg, err_t err)
 
 err_t echo_poll(void *arg, struct tcp_pcb *tpcb)
 {
-  printf("Iniciando la pila LWIP4");
   err_t ret_err;
   struct echo_state *es;
 
@@ -270,7 +266,6 @@ err_t echo_poll(void *arg, struct tcp_pcb *tpcb)
 
 err_t echo_sent(void *arg, struct tcp_pcb *tpcb, u16_t len)
 {
-  printf("Iniciando la pila LWIP5");
   struct echo_state *es;
 
   LWIP_UNUSED_ARG(len);
@@ -297,7 +292,6 @@ err_t echo_sent(void *arg, struct tcp_pcb *tpcb, u16_t len)
 
 void echo_send(struct tcp_pcb *tpcb, struct echo_state *es)
 {
-  printf("Iniciando la pila LWIP6");
   struct pbuf *ptr;
   err_t wr_err = ERR_OK;
 
@@ -345,7 +339,6 @@ void echo_send(struct tcp_pcb *tpcb, struct echo_state *es)
 
 void echo_close(struct tcp_pcb *tpcb, struct echo_state *es)
 {
-  printf("Iniciando la pila LWIP7");
   tcp_arg(tpcb, NULL);
   tcp_sent(tpcb, NULL);
   tcp_recv(tpcb, NULL);
