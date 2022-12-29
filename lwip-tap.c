@@ -224,7 +224,7 @@ int main(int argc, char *argv[])
       break;
     case 'E':
       udpecho_init();
-      printf("Entrada a funcion echo_init creacion de la connexion telnet \n")
+      printf("Entrada a funcion echo_init creacion de la connexion telnet \n");
       echo_init();
       break;
     case 'H':
