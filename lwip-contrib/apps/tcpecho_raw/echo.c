@@ -101,7 +101,7 @@ void echo_init(void)
 
 err_t echo_accept(void *arg, struct tcp_pcb *newpcb, err_t err)
 {
-  printf("Entrada al procedimiento \n");
+  printf("Entrada al procedimiento... \n");
   err_t ret_err;
   struct echo_state *es;
 

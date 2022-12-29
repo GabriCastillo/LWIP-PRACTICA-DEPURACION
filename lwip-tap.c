@@ -198,7 +198,7 @@ void help(void)
 
 int main(int argc, char *argv[])
 {
-  printf("Inicializando la pila LWIP 1 \n");
+  printf("Inicializando la pila LWIP \n");
 
   struct tapif tapif[NETIF_MAX];
   struct netif netif[NETIF_MAX];
@@ -223,7 +223,6 @@ int main(int argc, char *argv[])
       break;
     case 'E':
       udpecho_init();
-      printf("Entrada a funcion echo_init creacion de la connexion telnet \n");
       echo_init();
       break;
     case 'H':
