@@ -198,7 +198,7 @@ void help(void)
 
 int main(int argc, char *argv[])
 {
-  printf("InicIalizando la pila LWIP1");
+  printf("InicIalizando la pila LWIP  \n");
 
   struct tapif tapif[NETIF_MAX];
   struct netif netif[NETIF_MAX];
@@ -207,7 +207,7 @@ int main(int argc, char *argv[])
 
   memset(tapif, 0, sizeof(tapif));
   memset(netif, 0, sizeof(netif));
-  printf("InicIalizando la pila LWIP1");
+  printf("InicIalizando...");
   tcpip_init(NULL, NULL);
 
 #ifdef LWIP_DEBUG
@@ -224,11 +224,8 @@ int main(int argc, char *argv[])
       break;
     case 'E':
       udpecho_init();
-        printf("InicIalizando la pila LWIP2");
-
+      printf("Entrada a funcion echo_init creacion de la connexion telnet \n")
       echo_init();
-        printf("InicIalizando la pila LWIP3");
-
       break;
     case 'H':
       http_server_netconn_init();
